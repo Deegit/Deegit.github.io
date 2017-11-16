@@ -4,6 +4,8 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1058399167682-aeige791pidmppssa5oft7emle5hafrl.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+    <!-- JQuery code to animate HTML DOM objects-->
     <script src="jquery-3.2.1.js"></script>
     <script>
     $( document ).ready(function()
@@ -47,7 +49,7 @@
     </script>
 </head>
 <body>
-    <!-- Facebook code to integrate Like and Share-->
+<!-- Facebook code to integrate Like and Share-->
     <div id="fb-root"></div>
     <script>
         (
@@ -62,15 +64,19 @@
             (document, 'script', 'facebook-jssdk')
         );
     </script>
+    
+<!-- HTML code supplying HTML DOM object to be animated by JQuery code-->
     <div width="50%" height="50%" >
         <p style="background-color:red;">
             Hello jquery
         </p>
     </div>
+    
+<!-- Facebook code supplying HTML DOM object to integrate Like and Share-->
     <div class="fb-like" data-href="https://www.facebook.com/joralo.in/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">
     </div>
     
-    <!-- Google code to integrate Gmail Sign-in-->
+<!-- Google code to integrate Gmail Sign-in-->
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
     </div>
     <script>
