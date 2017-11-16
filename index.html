@@ -1,55 +1,78 @@
 <html>
 <head>
+    <!-- Google code to integrate Gmail Sign-in-->
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1058399167682-aeige791pidmppssa5oft7emle5hafrl.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="jquery-3.2.1.js"></script>
     <script>
-    $( document ).ready(function() {
+    $( document ).ready(function()
+                        {
         console.log( "document loaded" );
         var pars=document.querySelector('p');
         pars.textContent='document loaded';
+        
         // Slowly hide all paragraphs
         $( "p" ).hide( "slow" );
+        
         // Slowly hide all paragraphs
         $( "p" ).show( "slow" );
+        
         // SlideUp all paragraphs in 0.8 seconds
         $( "p" ).slideUp( 800 );
+        
         // SlideDown all paragraphs in 0.8 seconds
         $( "p" ).slideDown( 800 );
+        
         // Instantaneously toggle the display of all paragraphs
         $( "p" ).toggle();
+        
         // Slowly toggle the display of all paragraphs
         $( "p" ).toggle( "slow" );
+        
         // Toggle the display of all paragraphs over 1.8 seconds
         $( "p" ).toggle( 1800 );
         $( "p" ).animate( { height: 300 }, "slow", function() { $( "p" ).html( "We're in the callback, baby!" ); } );
         $( "p" ).animate( { height: 100 }, "slow").queue( function() { $( "p" ).html( "We're in the animation, baby!" ).animate( { height: 300 }, "slow").animate( { height: 50 }, "slow").animate( { height: 400 }, "slow").animate( { height: 100 }, "slow").animate( { height: 300 }, "slow");
+        
         // This tells jQuery to continue to the next item in the queue
         $( this ).dequeue();
-    } );
-        
-        
-    });
+        });
+    //});
  
-    $( window ).on( "load", function() {
+    $( window ).on( "load", function() 
+        {
         console.log( "window loaded" );
-    });
+        });
     </script>
 </head>
 <body>
+    <!-- Facebook code to integrate Like and Share-->
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=296040360884192';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-    <div width="50%" height="50%" ><p style="background-color:red;">Hello jquery</p></div>
-    <div class="fb-like" data-href="https://www.facebook.com/joralo.in/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <script>
+        (
+            function(d, s, id)
+            {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=296040360884192';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+            (document, 'script', 'facebook-jssdk')
+        );
+    </script>
+    <div width="50%" height="50%" >
+        <p style="background-color:red;">
+            Hello jquery
+        </p>
+    </div>
+    <div class="fb-like" data-href="https://www.facebook.com/joralo.in/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+    </div>
     
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <!-- Google code to integrate Gmail Sign-in-->
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+    </div>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -67,14 +90,19 @@
       };
     </script>
     
-    <a href="#" onclick="signOut();">Sign out</a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
+    <!-- Google code to integrate Gmail Sign-out from the present website-->
+    <a href="#" onclick="signOut();">
+        Sign out
+    </a>
+    <script>
+        function signOut() 
+        {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function ()
+            {
+                console.log('User signed out.');
+            });
+        }
+    </script>
 </body>
 </html>
