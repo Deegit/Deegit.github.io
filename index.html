@@ -55,6 +55,29 @@
         $('#my-table').dynatable();
     }
     </script>
+    $(document).ready( function() {
+        $toc = $('#toc-container');
+        $menuToggle = $('#menu-toggle');
+        $tagbar = $('#tagbar');
+        $content = $('#content');
+        $downloadBar = $('#download-and-share-container');
+        tocWidth = $toc.outerWidth();
+        tocTop = $toc.offset().top;
+
+        $('#toc').toc({
+          selectors: '#post > h2, #post > h3, #footer > h2',
+          anchorName: function(i, heading, prefix) {
+            return $(heading).text().replace(/^\s+|\s+$/g, "").replace(/\s+/g, "-").replace(/([A-Z])/g, function($1){return $1.toLowerCase();});
+          },
+          onHighlight: function($highlighted) {
+            var anchor = $highlighted.find('a').attr('href');
+            if (anchor !== lastAnchor) {
+              lastAnchor = anchor;
+              ga('send', 'event', 'navigation', 'scroll', anchor);
+            }
+          }
+        });
+      })
 </head>
 <body>
 <!-- Facebook code to integrate Like and Share-->
@@ -150,6 +173,20 @@
     </tr>
   </tbody>
 </table>
+    
+    
+    <div id='toc-container'>
+        <div id='toc'>
+        </div>
+      </div>
+
+      <a href="#" id="menu-toggle" class="btn btn-navbar" title="Menu" alt="Menu">
+        <i class="icon-th-list icon-white"></i>
+      </a>
+
+      <div id='post'>
+        <h2 class="first-heading">Demo</h2>
+          
 <!-- Dynatable ends -->
     
 </body>
