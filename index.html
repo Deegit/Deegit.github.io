@@ -137,7 +137,28 @@ $('#my-table').dynatable({
     <br><br>
     <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true" data-auto-logout-link="true" data-use-continue-as="true">
     </div>
-    
+
+<!-- Dynatable begins -->
+<script>
+    $('#my-ajax-table').dynatable({
+  dataset: {
+    ajax: true,
+    ajaxUrl: '/jquery.dynatable.json',
+    ajaxOnLoad: true,
+    records: []
+  }
+});
+</script>
+<table id="my-ajax-table">
+  <thead>
+    <th>Some Attribute</th>
+    <th>Some Other Attribute</th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<!-- Dynatable ends-->
+
 <!-- Dynatable starts-->
 <!--    <table id="my-table">
   <thead>
@@ -264,25 +285,6 @@ $('#my-table').dynatable({
 </i>
 </cite>
 <!-- Dynatable ends -->
-<!-- Dynatable begins -->
-<script>
-    $('#my-ajax-table').dynatable({
-  dataset: {
-    ajax: true,
-    ajaxUrl: '/jquery.dynatable.json',
-    ajaxOnLoad: true,
-    records: []
-  }
-});
-</script>
-<table id="my-ajax-table">
-  <thead>
-    <th>Some Attribute</th>
-    <th>Some Other Attribute</th>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-<!-- Dynatable ends-->
+
 </body>
 </html>
