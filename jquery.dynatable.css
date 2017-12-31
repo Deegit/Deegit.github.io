@@ -10,11 +10,10 @@
  */
 
 th a {
-  color: #fff;
-  background-color: #000;
+  color: #000;
 }
 th a:hover {
-  color: #fff;
+  color: #ddd;
   text-decoration: underline;
 }
 
