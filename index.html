@@ -287,12 +287,19 @@
                   }
                 ];
 
-    $('#my-final-table').dynatable({
+    /*--$('#my-final-table').dynatable({
       dataset: {
         records: json1
       }
-    });
-
+    });--*/
+    /*The above code is replaced by the code below*/
+/*--------------------------------------------*/
+        var dynatable = $('#my-final-table').dynatable({
+  dataset: {
+    records: json1
+  }
+}).data('dynatable');
+/*--------------------------------------------*/
     $('#setToItemsA').click(
         function() {
             setToItems(json1);
@@ -302,13 +309,21 @@
             setToItems(json2);
         });
 
-    function setToItems (argument) {
+    /*function setToItems (argument) {
         console.log(argument);
         $('#my-final-table').dynatable({
           dataset: {
             records: argument
           }
-        });
+        });*/
+    /*The above code is replaced by the code below*/
+/*--------------------------------------------*/
+    function setToItems (argument) {
+  console.log(argument);
+  dynatable.settings.dataset.originalRecords = argument;
+  dynatable.process();
+}
+/*--------------------------------------------*/
     }
 });
 </script>
