@@ -165,7 +165,7 @@ $('#my-table').dynatable({
     </tr>
   </tbody>
 </table> -->
-<table id="my-table">
+<table id="my-table" width="50%">
 <thead>
     <tr>
         <th>Rank</th>
@@ -261,82 +261,6 @@ $('#my-table').dynatable({
 * List of countries by GDP per capita from <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)_per_capita">Wikipedia</a>
 </i>
 </cite>
-
-<input type="button" value="items a" id="setToItemsA"><br>
-<input type="button" value="items b" id="setToItemsB"><br>
-<br><br>
-<table id="my-final-table">
-    <thead>
-        <th>Band</th>
-        <th>Song</th>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-<script>
-    $(document).ready(function() {
-    var json1 = [
-                  {
-                    "band": "Weezer",
-                    "song": "El Scorcho"
-                  },
-                  {
-                    "band": "Chevelle",
-                    "song": "Family System"
-                  }
-                ];
-
-    var json2 = [
-                  {
-                    "band": "Band1",
-                    "song": "Song1"
-                  },
-                  {
-                    "band": "Band2",
-                    "song": "Song2"
-                  }
-                ];
-
-    /*--$('#my-final-table').dynatable({
-      dataset: {
-        records: json1
-      }
-    });--*/
-    /*The above code is replaced by the code below*/
-/*--------------------------------------------*/
-        var dynatable = $('#my-final-table').dynatable({
-  dataset: {
-    records: json1
-  }
-}).data('dynatable');
-/*--------------------------------------------*/
-    $('#setToItemsA').click(
-        function() {
-            setToItems(json1);
-        });
-    $('#setToItemsB').click(
-        function() {
-            setToItems(json2);
-        });
-
-    /*function setToItems (argument) {
-        console.log(argument);
-        $('#my-final-table').dynatable({
-          dataset: {
-            records: argument
-          }
-        });*/
-    /*The above code is replaced by the code below*/
-/*--------------------------------------------*/
-    function setToItems (argument) {
-  console.log(argument);
-  dynatable.settings.dataset.originalRecords = argument;
-  dynatable.process();
-}
-/*--------------------------------------------*/
-    }
-});
-</script>
 <!-- Dynatable ends -->
     
 </body>
