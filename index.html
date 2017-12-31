@@ -67,18 +67,22 @@ $(document).ready(function()
                         perPageOptions: [3,4,6,8]
                                 }
                         });
-                  }
-                 );
+                  });
     </script>
 
 <script>
-    $('#my-ajax-table').dynatable({
-  dataset: {
-    ajax: true,
-    ajaxUrl: '/jquery.dynatable.json',
-    ajaxOnLoad: true,
-    records: []
-  }
+$(document).ready(function()
+    {
+    $('#my-ajax-table').dynatable(
+        {
+        dataset: 
+            {
+            ajax: true,
+            ajaxUrl: '/jquery.dynatable.json',
+            ajaxOnLoad: true,
+            records: []
+            }
+        });
 });
 </script>
 
