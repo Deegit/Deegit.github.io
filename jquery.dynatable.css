@@ -11,6 +11,7 @@
 #d1, #d2 {
   border: 1px solid #00f;
   margin: 20px;
+  padding: 20px;
 }
 #my-ajax-table th {
   width: 20%;
