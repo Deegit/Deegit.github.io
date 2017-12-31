@@ -8,6 +8,9 @@
  *
  * Date: Tue Jan 02 2014
  */
+th {
+  background-color: #000;
+}
 th a {
   color: #fff;
 }
