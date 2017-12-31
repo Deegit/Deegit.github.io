@@ -96,10 +96,16 @@ $(document).ready(function()
             ajax: true,
             ajaxUrl: '/jquery.dynatable.json',
             ajaxOnLoad: true,
+            response_code: null,
+            debit: null,
+            position: [],
             train: [],
             route: []
             },
         params: {
+            response_code: 'response_code',
+            debit: 'debit',
+            position: 'position',
             train: 'train',
             route: 'route',
             }
