@@ -58,18 +58,32 @@
     <script>
         //###### MY CODE STARTS HERE
 
-$(document).ready(function(){
-$('#my-table').dynatable({
-  dataset:{
-    perPageDefault: 3,
-    perPageOptions: [3,4,6,8]
-  }
-  
-});
-
-});
+$(document).ready(function()
+                  {
+                    $('#my-table').dynatable(
+                        {
+                        dataset:{
+                        perPageDefault: 3,
+                        perPageOptions: [3,4,6,8]
+                                }
+                        });
+                  }
+                 );
     </script>
-    <link rel="stylesheet" media="all" href="jquery.dynatable.css" />
+
+<script>
+    $('#my-ajax-table').dynatable({
+  dataset: {
+    ajax: true,
+    ajaxUrl: '/jquery.dynatable.json',
+    ajaxOnLoad: true,
+    records: []
+  }
+});
+</script>
+
+
+<link rel="stylesheet" media="all" href="jquery.dynatable.css" />
 </head>
 <body>
 <!-- Facebook code to integrate Like and Share-->
@@ -139,16 +153,6 @@ $('#my-table').dynatable({
     </div>
 
 <!-- Dynatable begins -->
-<script>
-    $('#my-ajax-table').dynatable({
-  dataset: {
-    ajax: true,
-    ajaxUrl: '/jquery.dynatable.json',
-    ajaxOnLoad: true,
-    records: []
-  }
-});
-</script>
 <table id="my-ajax-table">
   <thead>
     <th>Some Attribute</th>
