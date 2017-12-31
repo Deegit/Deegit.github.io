@@ -8,11 +8,13 @@
  *
  * Date: Tue Jan 02 2014
  */
-
+th {
+  background-color: #444;
+  border-right:1px solid #000;
+}
 th a {
   color: #f00;
   text-decoration: none;
-  background-color: #ccc;
 }
 th a:hover {
   color: #0f0;
