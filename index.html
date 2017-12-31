@@ -264,6 +264,25 @@ $('#my-table').dynatable({
 </i>
 </cite>
 <!-- Dynatable ends -->
-    
+<!-- Dynatable begins -->
+<script>
+    $('#my-ajax-table').dynatable({
+  dataset: {
+    ajax: true,
+    ajaxUrl: '/jquery.dynatable.json',
+    ajaxOnLoad: true,
+    records: []
+  }
+});
+</script>
+<table id="my-ajax-table">
+  <thead>
+    <th>Some Attribute</th>
+    <th>Some Other Attribute</th>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<!-- Dynatable ends-->
 </body>
 </html>
