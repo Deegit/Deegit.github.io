@@ -50,13 +50,26 @@
 
     
     <script src="jquery.dynatable.js"></script>
-    <script>
+    <!--<script>
         $(document).ready( function() {
         $('#my-table').dynatable();
-    }
-                          
+    }          
+    </script>-->
+    <script>
+        //###### MY CODE STARTS HERE
+
+$(document).ready(function(){
+$('#my-table').dynatable({
+  dataset:{
+    perPageDefault: 3,
+    perPageOptions: [3,4,6,8]
+  }
+  
+});
+
+});
     </script>
-    
+    <link rel="stylesheet" media="all" href="jquery.dynatable.css" />
 </head>
 <body>
 <!-- Facebook code to integrate Like and Share-->
@@ -156,7 +169,7 @@
     <!--------------------------------------------------->
 <div class="dynatable-demo">
 
-<table id="example-table" class="table table-bordered">
+<table id="my-table"" class="table table-bordered">
 <thead>
 <tr>
 <th>Rank</th>
