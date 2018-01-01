@@ -17,6 +17,7 @@
 tbody#span {
   height: 20px;
 }
+
 #my-ajax-table th {
   width: 20%;
   height: 20px;
@@ -30,7 +31,6 @@ tbody#span {
   background-color: #444;
   border-right:1px solid #000;
 }
-
 #my-ajax-table2 td {
   width: 6.25%;
   height: 20px;
@@ -38,6 +38,16 @@ tbody#span {
   border:1px solid #000;
 }
 
+
+#my-ajax-table2 th {
+  width: 7.14%;
+  height: 10px;
+  background-color: #444;
+  border-right:1px solid #000;
+}
+#my-ajax-table2 th a {
+  color: #fff;
+}
 #my-ajax-table3 td {
   width: 7.14%;
   height: 10px;
