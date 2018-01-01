@@ -175,7 +175,7 @@ xmlhttp.onreadystatechange = function() {
         {
             y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
-            /*y1 += myObj.route[i].no + "<br>";
+            y1 += myObj.route[i].no + "<br>";
             document.getElementById("no").innerHTML = y1;
             y2 += myObj.route[i].day + "<br>";
             document.getElementById("day").innerHTML = y2; 
@@ -396,8 +396,12 @@ xmlhttp.send();
 <div id="d2" style="width:70%;">
 <table id="my-ajax-table2" width="100%" height="150px">
   <thead>
-    <th>number</th>
-    <th>name</th>
+    <tr>
+        <th>number</th>
+        <th>name</th>
+    </tr>
+  </thead>
+  <thead>
     <th>no</th>
     <th>day</th>
     <th>name</th>
