@@ -148,7 +148,7 @@ xmlhttp.onreadystatechange = function() {
         var y1 = 0;
         myObj = JSON.parse(this.responseText);
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
-        for (i = 0; i < myObj.route.length; i++) 
+        for (i = 1; i < myObj.route.length; i++) 
         {
             for (j = 0; j < myObj.route[i].length; i++)
             {
