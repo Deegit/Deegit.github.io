@@ -130,7 +130,11 @@ $.ajax({
     $('#my-ajax-table2').dynatable({
       dataset: {
         records: data
-      }
+      },
+      params: 
+            {
+             records: 'route',
+             }
     });
   }
 });
