@@ -115,8 +115,8 @@ tbody#span {
   /*background-color: #444;*/
   border-right:1px solid #000;
 }
-#my-ajax-table3 thead th a {
-  color: #fff;
+#my-ajax-table3 th a {
+  font: #fff;
 }
 #my-ajax-table3 td {
   width: 7.14%;
