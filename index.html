@@ -144,7 +144,8 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) 
     {
-        var myObj, i, j, x, y, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11;
+        var myObj, x, y = "";
+        var i, j, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11 = 0;
         myObj = JSON.parse(this.responseText);
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
         for (i = 0; i < myObj.route.length; i++) 
