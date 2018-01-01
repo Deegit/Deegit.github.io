@@ -20,7 +20,7 @@
   border-right:1px solid #000;
 }
 
-#my-ajax-table2 th {
+#my-ajax-table2 th, #my-ajax-table2 td {
   width: 6.25%;
   height: 20px;
   background-color: #444;
