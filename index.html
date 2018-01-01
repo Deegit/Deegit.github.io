@@ -138,7 +138,7 @@ $.ajax({
 </script>
 
 <script>
-
+(function() {
 function ulWriter(rowIndex, record, columns, cellWriter) {
     var cssClass = "span4", li;
     if (rowIndex % 3 === 0) 
@@ -166,7 +166,7 @@ $.ajax({
     });
   }
 });
-
+})();
 </script>
 
 
