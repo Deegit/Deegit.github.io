@@ -152,10 +152,10 @@ xmlhttp.onreadystatechange = function() {
             for (j = 0; j < myObj.route[i].length; i++)
             {
                 x += myObj.route[i][j] + "<br>";
-                document.getElementById("position2").innerHTML = x;
+                document.getElementById("position2").innerHTML = "Second Column <br>" + x;
             }
             y += myObj.route[i] + "<br>";
-            document.getElementById("position3").innerHTML = y;
+            document.getElementById("position3").innerHTML = "Third Column <br>" + y;
         }
     }
 };
@@ -275,9 +275,9 @@ xmlhttp.send();
   </tbody>
   <tfoot>
       <tr>
-          <td colspan="8"><span id="position1"></span></td>
-          <td colspan="8"><span id="position2"></span></td>
-          <td colspan="8"><span id="position3"></span></td>
+          <td colspan="3"><span id="position1"></span></td>
+          <td colspan="3"><span id="position2"></span></td>
+          <td colspan="3"><span id="position3"></span></td>
       </tr>
   </tfoot>
 </table>
