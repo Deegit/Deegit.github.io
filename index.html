@@ -203,7 +203,7 @@ xmlhttp.onreadystatechange = function() {
             y14 += myObj.route[i].latemin + "<br>";
             document.getElementById("latemin").innerHTML = y14 + "</tr>";
             y += myObj.route[i].no + " " + myObj.route[i].day + " " + myObj.route[i].has_arrived + " " + myObj.route[i].has_departed + " " + myObj.route[i].scharr + " " + myObj.route[i].schdep + " " + myObj.route[i].actarr + " " + myObj.route[i].actdep + " " + myObj.route[i].scharr_date + " " + myObj.route[i].actarr_date + " " + myObj.route[i].latemin + "<br>";
-            document.getElementById("position3").innerHTML = "Third Column <br>" + y;
+            document.getElementById("position3").innerHTML = y;
         }
     }
 };
