@@ -13,6 +13,10 @@
   margin: 20px;
   padding: 50px;
 }
+
+tbody#span {
+  height: 20px;
+}
 #my-ajax-table th {
   width: 20%;
   height: 20px;
