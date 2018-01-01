@@ -155,7 +155,7 @@ xmlhttp.onreadystatechange = function() {
                 document.getElementById("position2").innerHTML = "Second Column <br>" + x;
             }
             y += myObj.route[i] + "<br>";
-            document.getElementById("position3").innerHTML = "Third Column <br>" + y;
+            document.getElementById("position3").innerHTML = "Third Column <br>" + y + myObj.route[0].no;
         }
     }
 };
