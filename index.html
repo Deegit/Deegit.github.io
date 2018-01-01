@@ -168,6 +168,7 @@ xmlhttp.onreadystatechange = function() {
         {
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
+            document.getElementById("t-body").innerHTML = "<tr>" + "</tr>";
             y0 += myObj.train.number + "<br>";
             document.getElementById("tr0number").innerHTML = y0;
             y00 += myObj.train.name + "<br>";
@@ -317,7 +318,7 @@ xmlhttp.send();
     <th>actarr_date</th>
     <th>latemin</th>
   </thead>
-  <tbody>
+  <tbody id="t-body">
     <td id="response_code"></th>
     <td id="debit"></th>
     <td id="position"></th>
