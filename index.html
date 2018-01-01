@@ -158,12 +158,12 @@ xmlhttp.onreadystatechange = function() {
         var y11 = "";
         /*var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11 = ""; /Comment: Only works for variable y11 and not for the previous variables/*/
         myObj = JSON.parse(this.responseText);
-        document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no + "<br>Route number : "+myObj.route[0].station[0]; 
+        document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no + "<br>Station name : "+myObj.route[0].station.name; 
         for (i = 0; i < myObj.route.length; i++) 
         {
             for (j = 0; j < myObj.route[i].length; i++)
             {
-                x += myObj.route[i].station[j] + "<br>";
+                x += myObj.route[i].station.name + "<br>";
                 document.getElementById("position2").innerHTML = "Second Column <br>" + x;
             }
             /*y += myObj.route[i] + "<br>";
