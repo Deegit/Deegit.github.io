@@ -215,7 +215,7 @@ xmlhttp.onreadystatechange = function() {
             document.getElementById("position3").innerHTML = y;
             
             var table = document.getElementById("my-ajax-table2");
-            var row = table.insertRow(i);
+            var row = table.insertRow(i+1);
             y1 = myObj.route[i].no + "<br>";
             var cell1 = row.insertCell(2);
             cell1.innerHTML = y1;
