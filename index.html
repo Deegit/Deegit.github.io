@@ -91,7 +91,7 @@ $(document).ready(function()
 </script>
 
 <script>
-$(document).ready(function()
+/*$(document).ready(function()
     {
     $('#my-ajax-table2').dynatable(
         {
@@ -119,7 +119,7 @@ $.ajax({
     });
     $('#position').text("Position: " + data.route[0].station.name + data.route[1].station.name + data.route[2].station.name);
   }
-});
+});*/
 </script>
 <script>
 /*    $.ajax({
@@ -136,6 +136,36 @@ $.ajax({
   }
 });*/
 </script>
+
+<script>
+
+function ulWriter(rowIndex, record, columns, cellWriter) {
+    var cssClass = "span4", li;
+    if (rowIndex % 3 === 0) { cssClass += ' first'; }
+    li = '<li class="' + cssClass + '"><div class="thumbnail"><div class="thumbnail-image">' + record.thumbnail + '</div><div class="caption">' + record.caption + '</div></div></li>';
+    return li;
+    $('#position').text("Position: " + data.route[0].station.name + data.route[1].station.name + data.route[2].station.name);
+  }
+
+$.ajax({
+  url: '/jquery.dynatable.json',
+  success: function(data){
+    $('#my-ajax-table2').dynatable({
+      dataset: {
+        records: data[0]
+      },
+      writers: {
+      _rowWriter: ulWriter
+      },
+      params: 
+            {
+            }
+    });
+  }
+});
+
+</script>
+
 
 <link rel="stylesheet" media="all" href="jquery.dynatable.css" />
 </head>
