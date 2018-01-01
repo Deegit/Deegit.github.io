@@ -142,13 +142,20 @@ $.ajax({
 var xmlhttp = new XMLHttpRequest();
 
 xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState == 4 && this.status == 200) 
+    {
         myObj = JSON.parse(this.responseText);
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
-        for (i = 0; i < myObj.route[0].length; i++) {
-    x += myObj.route[0][i] + "<br>";
-            document.getElementById("position2").innerHTML = "No : " + x;
-}
+        for (i = 0; i < myObj.route[i].length; i++) 
+        {
+            for (j = 0; j < myObj.route[i][j].length; i++)
+            {
+                x += myObj.route[i][j] + "<br>";
+                document.getElementById("position2").innerHTML = x;
+            }
+            x += myObj.route[0] + "<br>";
+            document.getElementById("position3").innerHTML = x;
+        }
     }
 };
 xmlhttp.open("GET", "jquery.dynatable.json", true);
@@ -269,6 +276,7 @@ xmlhttp.send();
       <tr>
           <td colspan="8"><span id="position1"></span></td>
           <td colspan="8"><span id="position2"></span></td>
+          <td colspan="8"><span id="position3"></span></td>
       </tr>
   </tfoot>
 </table>
