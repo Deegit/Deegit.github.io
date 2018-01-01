@@ -96,8 +96,11 @@ $(document).ready(function()
             ajax: true,
             ajaxUrl: '/jquery.dynatable.json',
             ajaxOnLoad: true,
-            records: route,
-            route: []
+            records: []
+            },
+        params: 
+            {
+             records: 'route'   
             }
         });
 });
