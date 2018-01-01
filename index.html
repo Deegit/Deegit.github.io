@@ -153,13 +153,13 @@ xmlhttp.onreadystatechange = function() {
         {
             for (j = 0; j < myObj.route[i].length; i++)
             {
-                x += myObj.route[i][j] + "<br>";
+                x += myObj.route[i].station[j] + "<br>";
                 document.getElementById("position2").innerHTML = "Second Column <br>" + x;
             }
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
-            y += myObj.route[i].no + "<br>";
-            document.getElementById("no").innerHTML = y;
+            y1 += myObj.route[i].no + "<br>";
+            document.getElementById("no").innerHTML = y1;
             y2 += myObj.route[i].day + "<br>";
             document.getElementById("day").innerHTML = y2; 
             y3 += myObj.route[i].has_arrived + "<br>";
