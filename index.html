@@ -105,6 +105,18 @@ $(document).ready(function()
              }
         });
 });
+$.ajax({
+  url: '/jquery.dynatable.json',
+  success: function(data) {
+    $('#dynatable').dynatable({
+      dataset: {
+        ajax: false,
+        records: data
+      }
+    });
+    $('#position').text("Position: " + data.position);
+  }
+});
 </script>
 
 
@@ -213,6 +225,11 @@ $(document).ready(function()
   </thead>
   <tbody>
   </tbody>
+  <tfoot>
+      <tr>
+          <td id="position"></td>
+      </tr>
+  </tfoot>
 </table>
 </div>
 <!-- Dynatable ends-->
