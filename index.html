@@ -154,8 +154,10 @@ xmlhttp.onreadystatechange = function() {
                 x += myObj.route[i][j] + "<br>";
                 document.getElementById("position2").innerHTML = "Second Column <br>" + x;
             }
-            y += myObj.route[i] + "<br>" + myObj.route[i].no;
-            document.getElementById("position3").innerHTML = "Third Column <br>" + y + myObj.route[i].no;
+            /*y += myObj.route[i] + "<br>";
+            document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
+            y += myObj.route[i].no + " " + myObj.route[i].day + " " + myObj.route[i].has_arrived + " " + myObj.route[i].has_departed + " " + myObj.route[i].scharr + " " + myObj.route[i].schdep + " " + myObj.route[i].actarr + " " + myObj.route[i].actdep + " " + myObj.route[i].scharr_date + " " + myObj.route[i].actarr_date + " " + myObj.route[i].latemin;
+            document.getElementById("position3").innerHTML = "Third Column <br>" + y;
         }
     }
 };
