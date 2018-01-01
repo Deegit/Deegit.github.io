@@ -171,17 +171,9 @@ xmlhttp.onreadystatechange = function() {
         y00 += myObj.train.name + "<br>";
         document.getElementById("tr0name").innerHTML = y00;
         
-        /*var table = document.getElementById("my-ajax-table2");
-        var row = table.insertRow(0);
-        y0 = myObj.train.number + "<br>";
-        var cell1 = row.insertCell(0);
-        cell1.innerHTML = y0;
-        y00 = myObj.train.name + "<br>";
-        var cell1 = row.insertCell(1);
-        cell1.innerHTML = y00;*/
         for (i = 0; i < myObj.route.length; i++) 
         {
-            /*y += myObj.route[i] + "<br>";
+            y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
             /*y1 += myObj.route[i].no + "<br>";
             document.getElementById("no").innerHTML = y1;
@@ -210,11 +202,62 @@ xmlhttp.onreadystatechange = function() {
             y13 += myObj.route[i].actarr_date + "<br>";
             document.getElementById("actarr_date").innerHTML = y13;
             y14 += myObj.route[i].latemin + "<br>";
-            document.getElementById("latemin").innerHTML = y14 + "</tr>";*/
+            document.getElementById("latemin").innerHTML = y14 + "</tr>";
             y += myObj.route[i].no + " " + myObj.route[i].day + " " + myObj.route[i].has_arrived + " " + myObj.route[i].has_departed + " " + myObj.route[i].scharr + " " + myObj.route[i].schdep + " " + myObj.route[i].actarr + " " + myObj.route[i].actdep + " " + myObj.route[i].scharr_date + " " + myObj.route[i].actarr_date + " " + myObj.route[i].latemin + "<br>";
             document.getElementById("position3").innerHTML = y;
-            
-            var table = document.getElementById("my-ajax-table2");
+        }
+    }
+};
+xmlhttp.open("GET", "jquery.dynatable.json", true);
+xmlhttp.send();
+
+</script>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) 
+    {
+        var myObj, i, j, x, y = "";
+        var y0 = "";
+        var y00 = "";
+        var y1 = "";
+        var y2 = "";
+        var y3 = "";
+        var y4 = "";
+        var y5 = "";
+        var y6 = "";
+        var y7 = "";
+        var y8 = "";
+        var y9 = "";
+        var y10 = "";
+        var y11 = "";
+        var y12 = "";
+        var y13 = "";
+        var y14 = "";
+        /*var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11 = ""; /Comment: Only works for variable y11 and not for the previous variables/*/
+        
+        myObj = JSON.parse(this.responseText);
+        /*document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no + "<br>Station name : "+myObj.route[0].station.name; 
+        
+        y0 += myObj.train.number + "<br>";
+        document.getElementById("tr0number").innerHTML = y0;
+        y00 += myObj.train.name + "<br>";
+        document.getElementById("tr0name").innerHTML = y00;*/
+        
+        /*var table = document.getElementById("my-ajax-table2");
+        var row = table.insertRow(0);
+        y0 = myObj.train.number + "<br>";
+        var cell1 = row.insertCell(0);
+        cell1.innerHTML = y0;
+        y00 = myObj.train.name + "<br>";
+        var cell1 = row.insertCell(1);
+        cell1.innerHTML = y00;*/
+        for (i = 0; i < myObj.route.length; i++) 
+        {
+            var table = document.getElementById("my-ajax-table3");
             var row = table.insertRow(i);
             y1 = myObj.route[i].no + "<br>";
             var cell1 = row.insertCell(0);
@@ -351,7 +394,7 @@ xmlhttp.send();
 
 <!-- Dynatable begins -->
 <div id="d2" style="width:70%;">
-<table >
+<table id="my-ajax-table2" width="100%" height="150px">
   <thead>
     <th>number</th>
     <th>name</th>
@@ -370,7 +413,41 @@ xmlhttp.send();
     <th>actarr_date</th>
     <th>latemin</th>
   </thead>
-  <tbody id="my-ajax-table2" width="100%" height="150px">
+  <tbody>
+  </tbody>
+  <tfoot>
+      <tr>
+          <td colspan="3"><span id="position1"></span></td>
+          <td colspan="1"><span id="position2"></span></td>
+          <td colspan="12"><span id="position3"></span></td>
+      </tr>
+  </tfoot>
+</table>
+</div>
+<!-- Dynatable ends-->
+
+<!-- Dynatable begins -->
+<div id="d2" style="width:70%;">
+<table >
+  <thead>
+    <th>Train<br>number</th>
+    <th>Train<br>name</th>
+    <th>Route<br>no</th>
+    <th>Day</th>
+    <th>Station<br>name</th>
+    <th>Station<br>code</th>
+    <th>Has<br>arrived</th>
+    <th>Has<br>departed</th>
+    <th>Distance</th>
+    <th>Arrival<br>time</th>
+    <th>Departure<br>time</th>
+    <th>actarr</th>
+    <th>actdep</th>
+    <th>Arrival<br>date</th>
+    <th>Departure<br>date</th>
+    <th>late<br>(in mins)</th>
+  </thead>
+  <tbody id="my-ajax-table3" width="100%" height="150px">
     <td><span id="tr0number"></span></td>
     <td><span id="tr0name"></span></td>
     <td><span id="no"></span></td>
