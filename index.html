@@ -96,7 +96,8 @@ $(document).ready(function()
             ajax: true,
             ajaxUrl: '/jquery.dynatable.json',
             ajaxOnLoad: true,
-            records: []
+            records: [],
+            station: []
             },
         params: 
             {
@@ -208,7 +209,6 @@ $.ajax({
   <thead>
     <th>no</th>
     <th>day</th>
-    <th>station</th>
     <th>has_arrived</th>
     <th>has_departed</th>
     <th>distance</th>
