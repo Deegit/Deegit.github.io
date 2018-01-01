@@ -258,7 +258,7 @@ xmlhttp.onreadystatechange = function() {
         cell1.innerHTML = y00;*/
         for (i = 0; i < myObj.route.length; i++) 
         {
-            var table = document.getElementById("my-ajax-table3");
+            var table = document.getElementById("my-ajax-tbody1");
             var row = table.insertRow(i);
             y1 = myObj.route[i].no + "<br>";
             var cell1 = row.insertCell(0);
@@ -397,12 +397,8 @@ xmlhttp.send();
 <div id="d2" style="width:70%;">
 <table id="my-ajax-table2" width="100%" height="150px">
   <thead>
-    <tr>
-        <th>number</th>
-        <th>name</th>
-    </tr>
-  </thead>
-  <thead>
+    <th>number</th>
+    <th>name</th>
     <th>no</th>
     <th>day</th>
     <th>name</th>
@@ -450,7 +446,7 @@ xmlhttp.send();
 
 <!-- Dynatable begins -->
 <div id="d2" style="width:70%;">
-<table >
+<table  id="my-ajax-table3" width="100%" height="150px">
   <thead>
     <th>Train<br>number</th>
     <th>Train<br>name</th>
@@ -471,7 +467,7 @@ xmlhttp.send();
     <th>Departure<br>date</th>
     <th>late<br>(in mins)</th>
   </thead>
-  <tbody id="my-ajax-table3" width="100%" height="150px">
+  <tbody id="my-ajax-tbody1" width="100%" height="150px">
   </tbody>
   <tfoot>
   </tfoot>
