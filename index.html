@@ -173,8 +173,9 @@ xmlhttp.onreadystatechange = function() {
         
         for (i = 0; i < myObj.route.length; i++) 
         {
-            y += myObj.route[i] + "<br>";
+            /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
+            
             y1 += myObj.route[i].no + "<br>";
             document.getElementById("no").innerHTML = y1;
             y2 += myObj.route[i].day + "<br>";
@@ -418,6 +419,23 @@ xmlhttp.send();
     <th>latemin</th>
   </thead>
   <tbody>
+    <td><span id="tr0number"></span></td>
+    <td><span id="tr0name"></span></td>
+    <td><span id="no"></span></td>
+    <td><span id="day"></span></td>
+    <td><span id="st0name"></span></td>
+    <td><span id="st0code"></span></td>
+    <td><span id="has_arrived"></span></td>
+    <td><span id="has_departed"></span></td>
+    <td><span id="distance"></span></td>
+    <td><span id="scharr"></span></td>
+    <td><span id="schdep"></span></td>
+    <td><span id="actarr"></span></td>
+    <td><span id="actdep"></span></td>
+    <td><span id="scharr_date"></span></td>
+    <td><span id="actarr_date"></span></td>
+    <td><span id="latemin"></span></td>
+
   </tbody>
   <tfoot>
       <tr>
@@ -436,6 +454,8 @@ xmlhttp.send();
   <thead>
     <th>Train<br>number</th>
     <th>Train<br>name</th>
+  </thead>
+  <thead>
     <th>Route<br>no</th>
     <th>Day</th>
     <th>Station<br>name</th>
@@ -452,29 +472,8 @@ xmlhttp.send();
     <th>late<br>(in mins)</th>
   </thead>
   <tbody id="my-ajax-table3" width="100%" height="150px">
-    <td><span id="tr0number"></span></td>
-    <td><span id="tr0name"></span></td>
-    <td><span id="no"></span></td>
-    <td><span id="day"></span></td>
-    <td><span id="st0name"></span></td>
-    <td><span id="st0code"></span></td>
-    <td><span id="has_arrived"></span></td>
-    <td><span id="has_departed"></span></td>
-    <td><span id="distance"></span></td>
-    <td><span id="scharr"></span></td>
-    <td><span id="schdep"></span></td>
-    <td><span id="actarr"></span></td>
-    <td><span id="actdep"></span></td>
-    <td><span id="scharr_date"></span></td>
-    <td><span id="actarr_date"></span></td>
-    <td><span id="latemin"></span></td>
   </tbody>
   <tfoot>
-      <tr>
-          <td colspan="3"><span id="position1"></span></td>
-          <td colspan="1"><span id="position2"></span></td>
-          <td colspan="12"><span id="position3"></span></td>
-      </tr>
   </tfoot>
 </table>
 </div>
