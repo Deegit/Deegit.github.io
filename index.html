@@ -154,8 +154,8 @@ xmlhttp.onreadystatechange = function() {
                 x += myObj.route[i][j] + "<br>";
                 document.getElementById("position2").innerHTML = "Second Column <br>" + x;
             }
-            y += myObj.route[i] + "<br>";
-            document.getElementById("position3").innerHTML = "Third Column <br>" + y + myObj.route[0].no;
+            y += myObj.route[i] + "<br>" + myObj.route[i].no;
+            document.getElementById("position3").innerHTML = "Third Column <br>" + y + myObj.route[i].no;
         }
     }
 };
