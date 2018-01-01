@@ -68,7 +68,16 @@ th a:hover {
   background: none;
   color: #999;
 }
+
 /*My code*/
+
+#my-table th {
+  width: 25%;
+  height: 20px;
+  background-color: #444;
+  border-right:1px solid #000;
+}
+
 #d1, #d2, #d3 {
   border: 1px solid #00f;
   margin: 20px;
@@ -103,10 +112,10 @@ tbody#span {
 #my-ajax-table3 th {
   width: 7.14%;
   height: 10px;
-  background-color: #444;
+  /*background-color: #444;*/
   border-right:1px solid #000;
 }
-#my-ajax-table3 th a {
+#my-ajax-table3>th a {
   color: #fff;
 }
 #my-ajax-table3 td {
@@ -114,11 +123,4 @@ tbody#span {
   height: 10px;
   background-color: #eee;
   border:1px solid #000;
-}
-
-#my-table th {
-  width: 25%;
-  height: 20px;
-  background-color: #444;
-  border-right:1px solid #000;
 }
