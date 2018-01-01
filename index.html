@@ -151,11 +151,11 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
         for (i = 0; i < myObj.route.length; i++) 
         {
-            for (j = 0; j < myObj.route[i].length; i++)
+            /*for (j = 0; j < myObj.route[i].length; i++)
             {
                 x += myObj.route[i].station[j] + "<br>";
                 document.getElementById("position2").innerHTML = "Second Column <br>" + x;
-            }
+            }*/
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
             y1 += myObj.route[i].no + "<br>";
