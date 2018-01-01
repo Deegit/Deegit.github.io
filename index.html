@@ -100,7 +100,7 @@ $(document).ready(function()
             ajax: true,
             ajaxUrl: '/jquery.dynatable.json',
             ajaxOnLoad: true,
-            records: null
+            records: train
             },
         params: 
             {
@@ -117,7 +117,7 @@ $.ajax({
         records: data
       }
     });
-    $('#position').text("Position: " + data.route[0].station.name + "<br>" + data.route[1].station.name + data.route[2].station.name);
+    $('#position').text("Position: " + data.route[0].station.name + "&lt;br&gt;" + data.route[1].station.name + data.route[2].station.name);
   }
 });
 </script>
