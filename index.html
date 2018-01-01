@@ -144,7 +144,7 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) 
     {
-        var myObj, i, j, x, y = "";
+        var myObj, i, j, x, y, y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11 = "";
         myObj = JSON.parse(this.responseText);
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
         for (i = 0; i < myObj.route.length; i++) 
@@ -156,8 +156,31 @@ xmlhttp.onreadystatechange = function() {
             }
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
+            y1 += myObj.route[i].no + "<br>";
+            document.getElementById("no").innerHTML =  + y1;
+            y2 += myObj.route[i].day + "<br>";
+            document.getElementById("day").innerHTML = "<br>" + y2; 
+            y3 += myObj.route[i].has_arrived + "<br>";
+            document.getElementById("has_arrived").innerHTML = y3;
+            y4 += myObj.route[i].has_departed + "<br>";
+            document.getElementById("has_departed").innerHTML = y4;
+            y5 += myObj.route[i].scharr + "<br>";
+            document.getElementById("scharr").innerHTML = y5;
+            y6 += myObj.route[i].schdep + "<br>";
+            document.getElementById("schdep").innerHTML = y6;
+            y7 += myObj.route[i].actarr + "<br>";
+            document.getElementById("actarr").innerHTML = y7;
+            y8 += myObj.route[i].actdep + "<br>";
+            document.getElementById("actdep").innerHTML = y8;
+            y9 += myObj.route[i].scharr_date + "<br>";
+            document.getElementById("scharr_date").innerHTML = y9;
+            y10 += myObj.route[i].actarr_date + "<br>";
+            document.getElementById("actarr_date").innerHTML = y10;
+            y11 += myObj.route[i].latemin + "<br>";
+            document.getElementById("latemin").innerHTML = y11;
             y += myObj.route[i].no + " " + myObj.route[i].day + " " + myObj.route[i].has_arrived + " " + myObj.route[i].has_departed + " " + myObj.route[i].scharr + " " + myObj.route[i].schdep + " " + myObj.route[i].actarr + " " + myObj.route[i].actdep + " " + myObj.route[i].scharr_date + " " + myObj.route[i].actarr_date + " " + myObj.route[i].latemin + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;
+
         }
     }
 };
@@ -274,6 +297,25 @@ xmlhttp.send();
     <th>latemin</th>
   </thead>
   <tbody>
+    <td id="response_code"></th>
+    <td id="debit"></th>
+    <td id="position"></th>
+    <td id="number"></th>
+    <td id="name"></th>
+    <td id="no"></th>
+    <td id="day"></th>
+    <td id="name"></th>
+    <td id="code"></th>
+    <td id="has_arrived"></th>
+    <td id="has_departed"></th>
+    <td id="distance"></th>
+    <td id="scharr"></th>
+    <td id="schdep"></th>
+    <td id="actarr"></th>
+    <td id="actdep"></th>
+    <td id="scharr_date"></th>
+    <td id="actarr_date"></th>
+    <td id="latemin"></th>
   </tbody>
   <tfoot>
       <tr>
