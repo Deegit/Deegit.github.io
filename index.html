@@ -100,20 +100,18 @@ $(document).ready(function()
             ajax: true,
             ajaxUrl: '/jquery.dynatable.json',
             ajaxOnLoad: true,
-            records: [],
-            station: []
+            records: []
             },
         params: 
             {
-             records: 'route',
-             station: 'station'
+             records: 'route'
              }
         });
 });
 $.ajax({
   url: '/jquery.dynatable.json',
   success: function(data) {
-    $('#dynatable').dynatable({
+    $('#my-ajax-table2').dynatable({
       dataset: {
         ajax: false,
         records: data
@@ -133,8 +131,8 @@ $.ajax({
       },
       params: 
             {
-             station: 'station'
-             }
+                records: data
+            }
     });
   }
 });
@@ -226,7 +224,6 @@ $.ajax({
 <div id="d2" style="width:70%;">
 <table id="my-ajax-table2" width="100%" height="150px">
   <thead>
-<th></th>
     <th>response_code</th>
     <th>debit</th>
     <th>position</th>
