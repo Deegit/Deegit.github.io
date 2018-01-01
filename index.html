@@ -145,6 +145,8 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) 
     {
         var myObj, i, j, x, y = "";
+        var y0 = "";
+        var y00 = "";
         var y1 = "";
         var y2 = "";
         var y3 = "";
@@ -164,13 +166,12 @@ xmlhttp.onreadystatechange = function() {
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no + "<br>Station name : "+myObj.route[0].station.name; 
         for (i = 0; i < myObj.route.length; i++) 
         {
-            for (j = 0; j < myObj.route[i].length; i++)
-            {
-                x += myObj.route[i].station.name + "<br>";
-                document.getElementById("position2").innerHTML = "Second Column <br>" + x;
-            }
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
+            y0 += myObj.train.number + "<br>";
+            document.getElementById("tr0number").innerHTML = y0;
+            y00 += myObj.train.name + "<br>";
+            document.getElementById("tr0name").innerHTML = y00;
             y1 += myObj.route[i].no + "<br>";
             document.getElementById("no").innerHTML = y1;
             y2 += myObj.route[i].day + "<br>";
@@ -201,7 +202,6 @@ xmlhttp.onreadystatechange = function() {
             document.getElementById("latemin").innerHTML = y14;
             y += myObj.route[i].no + " " + myObj.route[i].day + " " + myObj.route[i].has_arrived + " " + myObj.route[i].has_departed + " " + myObj.route[i].scharr + " " + myObj.route[i].schdep + " " + myObj.route[i].actarr + " " + myObj.route[i].actdep + " " + myObj.route[i].scharr_date + " " + myObj.route[i].actarr_date + " " + myObj.route[i].latemin + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;
-
         }
     }
 };
