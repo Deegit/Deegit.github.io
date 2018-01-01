@@ -171,14 +171,14 @@ xmlhttp.onreadystatechange = function() {
         y00 += myObj.train.name + "<br>";
         document.getElementById("tr0name").innerHTML = y00;
         
-        /*var table = document.getElementById("my-ajax-table2");
+        var table = document.getElementById("my-ajax-table2");
         var row = table.insertRow(0);
-        y0 += myObj.train.number + "<br>";
+        y0 = myObj.train.number + "<br>";
         var cell1 = row.insertCell(0);
         cell1.innerHTML = y0;
-        y00 += myObj.train.name + "<br>";
+        y00 = myObj.train.name + "<br>";
         var cell1 = row.insertCell(1);
-        cell1.innerHTML = y00;*/
+        cell1.innerHTML = y00;
         for (i = 0; i < myObj.route.length; i++) 
         {
             /*y += myObj.route[i] + "<br>";
@@ -214,13 +214,13 @@ xmlhttp.onreadystatechange = function() {
             y += myObj.route[i].no + " " + myObj.route[i].day + " " + myObj.route[i].has_arrived + " " + myObj.route[i].has_departed + " " + myObj.route[i].scharr + " " + myObj.route[i].schdep + " " + myObj.route[i].actarr + " " + myObj.route[i].actdep + " " + myObj.route[i].scharr_date + " " + myObj.route[i].actarr_date + " " + myObj.route[i].latemin + "<br>";
             document.getElementById("position3").innerHTML = y;
             
-            var table = document.getElementById("my-ajax-table2");
-            var row = table.insertRow(i);
+            /*var table = document.getElementById("my-ajax-table2");
+            var row = table.insertRow(2);
             y1 = myObj.route[i].no + "<br>";
             var cell1 = row.insertCell(0);
             cell1.innerHTML = y1;
             y2 = myObj.route[i].day + "<br>";
-            var cell2 = row.insertCell(1);
+            var cell2 = row.insertCell(3);
             cell2.innerHTML = y2; 
             y3 = myObj.route[i].station.name + "<br>";
             var cell3 = row.insertCell(4);
@@ -257,7 +257,7 @@ xmlhttp.onreadystatechange = function() {
             cell14.innerHTML = y13;
             y14 = myObj.route[i].latemin + "<br>";
             var cell15 = row.insertCell(15);
-            cell15.innerHTML = y14 + "</tr>";
+            cell15.innerHTML = y14 + "</tr>";*/
         }
     }
 };
