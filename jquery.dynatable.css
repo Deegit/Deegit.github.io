@@ -61,11 +61,11 @@ tbody#span {
   background-color: #444;
   border-right:1px solid #000;
 }
-th a {
+#my-table th a {
   color: #f00;
   text-decoration: none;
 }
-th a:hover {
+#my-table th a:hover {
   color: #0f0;
   text-decoration: underline;
 }
