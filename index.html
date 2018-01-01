@@ -168,13 +168,11 @@ xmlhttp.onreadystatechange = function() {
         {
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
-            /*document.getElementById("t-body-1").innerHTML = "<tr>";
-            document.getElementById("t-body-2").innerHTML = "</tr>";*/
-            y0 += "<tr style="border:1px solid #000;">" + myObj.train.number + "<br></tr>";
+            y0 += myObj.train.number + "<br>";
             document.getElementById("tr0number").innerHTML = y0;
-            y00 += "<tr>" + myObj.train.name + "<br></tr>";
+            y00 += myObj.train.name + "<br>";
             document.getElementById("tr0name").innerHTML = y00;
-            y1 += "<tr>" + myObj.route[i].no + "<br></tr>";
+            y1 += myObj.route[i].no + "<br>";
             document.getElementById("no").innerHTML = y1;
             y2 += myObj.route[i].day + "<br>";
             document.getElementById("day").innerHTML = y2; 
