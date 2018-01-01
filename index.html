@@ -144,10 +144,19 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) 
     {
-        var myObj, x, y = "";
-        var i, j = 0;
+        var myObj, i, j, x, y = "";
         var y1 = "";
-        var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11 = ""; 
+        var y2 = "";
+        var y3 = "";
+        var y4 = "";
+        var y5 = "";
+        var y6 = "";
+        var y7 = "";
+        var y8 = "";
+        var y9 = "";
+        var y10 = "";
+        var y11 = "";
+        /*var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10, y11 = ""; /Comment: Only works for variable y11 and not for the previous variables/*/
         myObj = JSON.parse(this.responseText);
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
         for (i = 0; i < myObj.route.length; i++) 
