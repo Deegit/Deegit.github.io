@@ -91,7 +91,7 @@ $(document).ready(function()
 </script>
 
 <script>
-$(document).ready(function()
+/*$(document).ready(function()
     {
     $('#my-ajax-table2').dynatable(
         {
@@ -121,9 +121,20 @@ $.ajax({
     });
     $('#position').text("Position: " + data.route[0].station.name + data.route[1].station.name + data.route[2].station.name);
   }
+});*/
+</script>
+<script>
+    $.ajax({
+  url: '/jquery.dynatable.json',
+  success: function(data){
+    $('#my-ajax-table2').dynatable({
+      dataset: {
+        records: data
+      }
+    });
+  }
 });
 </script>
-
 
 <link rel="stylesheet" media="all" href="jquery.dynatable.css" />
 </head>
