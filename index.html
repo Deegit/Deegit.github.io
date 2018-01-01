@@ -146,7 +146,7 @@ xmlhttp.onreadystatechange = function() {
     {
         var myObj, x, y = "";
         var i, j = 0;
-        var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10 = 0; 
+        var y1, y2, y3, y4, y5, y6, y7, y8, y9, y10 = ""; 
         var y11 = "";
         myObj = JSON.parse(this.responseText);
         document.getElementById("position1").innerHTML = "Where is the train at present ? : "+myObj.position + "<br>Train number : "+myObj.train.number + "<br>Train name : "+myObj.train.name + "<br>Route number : "+myObj.route[0].no; 
@@ -159,8 +159,8 @@ xmlhttp.onreadystatechange = function() {
             }
             /*y += myObj.route[i] + "<br>";
             document.getElementById("position3").innerHTML = "Third Column <br>" + y;*/
-            y1 += myObj.route[i].no;
-            document.getElementById("no").innerHTML = y1 + "<br>";
+            y1 += myObj.route[i].no + "<br>";
+            document.getElementById("no").innerHTML = y1;
             y2 += myObj.route[i].day + "<br>";
             document.getElementById("day").innerHTML = y2; 
             y3 += myObj.route[i].has_arrived + "<br>";
