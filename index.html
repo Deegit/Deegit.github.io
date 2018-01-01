@@ -139,14 +139,7 @@ $.ajax({
 
 <script>
 (function() {
-function ulWriter(rowIndex, record, columns, cellWriter) {
-    var cssClass = "span4", li;
-    if (rowIndex % 3 === 0) 
-        { 
-            cssClass += ' first'; 
-        }
-    li = '<li class="' + cssClass + '"><div class="thumbnail"><div class="thumbnail-image">' + record.position + '</div><div class="caption">' + record.train.number + '</div></div></li>';
-    return li;
+function ulWriter(data) {
     $('#position').text("Position: " + data.route[0].station.name + data.route[1].station.name + data.route[2].station.name);
   }
 
