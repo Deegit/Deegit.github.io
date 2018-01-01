@@ -96,12 +96,11 @@ $(document).ready(function()
             ajax: true,
             ajaxUrl: '/jquery.dynatable.json',
             ajaxOnLoad: true,
-            records: [],
-            totalRecordCount: null
+            records: [1],
             },
         params: 
             {
-             records: 'records',
+             records: 'route',
              station: 'station'
              }
         });
