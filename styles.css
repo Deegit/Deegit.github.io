@@ -11,8 +11,8 @@ body
 }
 
 /* main page */
-/*article*/
-body {
+/*article
+{
 	position: fixed;
 	width: 70%;
 	left: 0;
@@ -31,8 +31,8 @@ body {
 }
 
 
-/*article:after*/
-body {
+article:after
+{
 	position: absolute;
 	content: ' ';
 	left: 100%;
@@ -104,7 +104,7 @@ nav a:hover, nav a:focus
 }
 
 /* hovering */
-/*article, article:after,*/ body, body:after, nav, nav *
+/*article, article:after,*/ nav, nav *
 {
 	-webkit-transition: all 600ms ease;
 	-moz-transition: all 600ms ease;
@@ -118,8 +118,7 @@ nav:hover
 	left: 0;
 }
 
-/*nav:hover ~ article*/
-nav:hover ~ body
+/*nav:hover ~ article
 {
 	-webkit-transform: translateX(16em) perspective(600px) rotateY(10deg);
 	-moz-transform: translateX(16em) perspective(600px) rotateY(10deg);
@@ -128,8 +127,8 @@ nav:hover ~ body
 	transform: translateX(16em) perspective(600px) rotateY(10deg);
 }
 
-/*nav:hover ~ article:after*/
-nav:hover ~ body:after {
+nav:hover ~ article:after
+{
 	left: 60%;
 }
 */
